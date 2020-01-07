@@ -143,6 +143,8 @@ def shoe_size(players_name)
  end 
 end 
 
+
+
 def team_colors(team_name)         
   game_hash.each do |place, team|
     if team[:team_name] == team_name
@@ -209,12 +211,36 @@ end
 
 # Build a method, player_stats, that takes in an argument of a player's name and returns a hash of that player's stats.
 
+# def big_shoe_rebounds
+#   rebounds = 0
+#   shoesze = 0 
+# game_hash.each do |place, team|
+#     team.each do |attributes, data|
+#       if attributes == :players
+#         data.each do |player|
+#           player.each do 
+#             return player[:rebounds]
+#     end 
+#     end 
+#   end 
+# end 
+# end 
+# end 
+
 def big_shoe_rebounds
-  arr = []
+  rebounds = 0
+  shoesze = 0 
 game_hash.each do |place, team|
-end 
-return 11
-end 
+    team[:players].each do |player|
+      if player[:shoe] > shoesze
+        player[:shoe] == shoesze
+        player[:rebounds] == rebounds
+      end 
+    end 
+  end 
+  rebounds
+end
+
 
 #   Build a method, big_shoe_rebounds, that will return the number of rebounds associated with the player that has the largest shoe size. Break this one down into steps:
 # First, find the player with the largest shoe size
